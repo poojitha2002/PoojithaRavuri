@@ -23,15 +23,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'r^c*z25)gyl2^+b54il_p%oy+pk&i0alv8icm6)uks&834_+8h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['127.0.0.1','poojitha-ravuri.herokuapp.com']
+
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'myportfolio.apps.MyportfolioConfig',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
